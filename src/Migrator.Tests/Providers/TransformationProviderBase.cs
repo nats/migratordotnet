@@ -297,6 +297,27 @@ namespace Migrator.Tests.Providers
     }
 
     [Test]
+	public void AddIndex()
+	{
+		string indexName = "test_index";
+		
+		Assert.IsFalse(_provider.IndexExists("TestTwo", indexName));
+		_provider.AddIndex(indexName, "TestTwo", "Id", "TestId" );
+		Assert.IsTrue(_provider.IndexExists("TestTwo", indexName));
+	}
+
+	[Test]
+	public void RemoveIndex()
+	{
+		string indexName = "test_index";
+
+		Assert.IsFalse(_provider.IndexExists("TestTwo", indexName));
+		_provider.AddIndex(indexName, "TestTwo", "Id", "TestId");
+		_provider.RemoveIndex("TestTwo", indexName);
+		Assert.IsFalse(_provider.IndexExists("TestTwo", indexName));
+	}
+
+    [Test]
     public void AppliedMigrations()
     {
       Assert.IsFalse(_provider.TableExists("SchemaInfo"));
