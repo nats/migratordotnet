@@ -61,6 +61,14 @@ namespace Migrator.Tests.Providers
       );
     }
 
+	[Test]
+	public void CanCreateTableWithGuidAsPrimaryKey()
+	{
+		_provider.AddTable("GuidTest",
+			new Column("Id", DbType.Guid, ColumnProperty.PrimaryKey));
+		_provider.RemoveTable("GuidTest");
+	}
+
     [Test]
     public void TableExistsWorks() 
     {
