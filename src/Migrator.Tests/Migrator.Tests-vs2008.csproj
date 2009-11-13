@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{882B6A93-67B8-45BF-8636-5796B1B1CBF8}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="ColumnPropertyMapperTest.cs" />
     <Compile Include="Data\TestMigrations.cs" />
+    <Compile Include="Dialects\MysqlDialectTest.cs" />
     <Compile Include="MigrationLoaderTest.cs" />
     <Compile Include="MigrationTestCase.cs" />
     <Compile Include="MigrationTypeComparerTest.cs" />
