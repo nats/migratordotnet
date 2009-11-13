@@ -86,8 +86,10 @@ namespace Migrator.Providers
             
             if (! dialect.IdentityNeedsType)
                 AddValueIfSelected(column, ColumnProperty.Identity, vals);
-                
-            AddValueIfSelected(column, ColumnProperty.Unsigned, vals);
+            
+			if (dialect.IsUnsignedCompatible(column.Type))
+				AddValueIfSelected(column, ColumnProperty.Unsigned, vals);
+
             if (! PropertySelected(column.ColumnProperty, ColumnProperty.PrimaryKey) || dialect.NeedsNotNullForIdentity)
                 AddValueIfSelected(column, ColumnProperty.NotNull, vals);
                 
