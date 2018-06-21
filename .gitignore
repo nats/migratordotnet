@@ -1,0 +1,15 @@
+/src/Migrator.Console/bin/
+/src/Migrator.Console/obj/
+/src/Migrator.Framework/bin/
+/src/Migrator.Framework/obj/
+/src/Migrator.MSBuild/bin/
+/src/Migrator.MSBuild/obj/
+/src/Migrator.NAnt/bin/
+/src/Migrator.NAnt/obj/
+/src/Migrator.Providers/bin/
+/src/Migrator.Providers/obj/
+/src/Migrator.Tests/bin/
+/src/Migrator.Tests/obj/
+/src/Migrator/bin/
+/src/Migrator/obj/
+/.vs/
